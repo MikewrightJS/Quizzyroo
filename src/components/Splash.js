@@ -15,7 +15,7 @@ function Splash({playerName, handleName}) {
          <div className="container">
             <h1 className="title">Quizzyrooo</h1>
             <p className="sub-text">Take the general knowledge quiz</p>
-            <input className="playerName" value={playerName} onChange={e=> handleName(e)} name="playerName" />
+            <input maxLength="10" placeholder="Name" className="playerName" value={playerName} onChange={e=> handleName(e)} name="playerName" />
             <button onClick={handleNameStart} className="start-button">Start quiz</button>
             <a href="highscore"><button className="start-button">Highscore</button></a>
             </div>
