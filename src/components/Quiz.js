@@ -40,7 +40,7 @@ function Quiz({playerName}) {
     const scoreCollectionRef = collection(db,"highscores")
 
     useEffect(() => {
-            let q = fetch(`https://opentdb.com/api.php?amount=50&type=multiple&${difficulty}`)
+            let q = fetch(`https://opentdb.com/api.php?amount=50&type=multiple&${difficulty}&category=9`)
                 .then(res => res.json())
                 .then(data =>setQuestionsList(data.results))
     },[difficulty])

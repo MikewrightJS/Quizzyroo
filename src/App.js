@@ -15,7 +15,7 @@ function App() {
     SetPlayerName(e.target.value);
     localStorage.setItem("name",e.target.value) 
   }
-  fetch(`https://opentdb.com/api.php?amount=1&type=multiple&difficulty=easy`)
+  fetch(`https://opentdb.com/api.php?amount=1&type=multiple&difficulty=easy&category=9`)
   .then(res => res.json())
   .then(data =>localStorage.setItem("firstQuestion",JSON.stringify(data.results)))
     
